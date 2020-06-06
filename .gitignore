@@ -1,0 +1,6 @@
+.env
+
+var/data/*
+!var/data/.gitkeep
+var/logs/*
+!var/logs/.gitkeep
