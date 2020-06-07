@@ -12,6 +12,8 @@ RUN chmod +x /usr/bin/*
 
 RUN if [ ! -z ${USER_ID} ]; then usermod -u ${USER_ID} www-data; fi
 RUN if [ ! -z ${USER_ID} ]; then groupmod -g ${USER_ID} www-data; fi
+RUN mkdir -p /var/www/.composer/cache
+RUN chown -R www-data:www-data /var/www
 
 WORKDIR /var/www/project
 CMD docker-entrypoint.sh
