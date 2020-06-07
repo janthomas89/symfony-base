@@ -1,5 +1,9 @@
 .env
 
+project
+!project/bin/container-started.sh
+project/.env.local
+
 var/data/*
 !var/data/.gitkeep
 var/logs/*

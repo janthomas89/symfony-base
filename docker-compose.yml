@@ -20,7 +20,6 @@ services:
     user: ${USER_ID}
     volumes:
       - ${PROJECT_PATH}:/var/www/project:cached
-      - ./var/logs/symfony:/var/www/project/var/logs:cached
       - ./var/data/php/workspace:/var/www/workspace:cached
       - ${COMPOSER_CACHE_PATH}:/var/www/.composer/cache:cached
       - ${SSH_KEY_PATH}/${SSH_KEY_PATH_NAME}:/var/www/.ssh/id_rsa
