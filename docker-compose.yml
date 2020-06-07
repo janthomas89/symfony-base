@@ -22,10 +22,10 @@ services:
       - ${PROJECT_PATH}:/var/www/project:cached
       - ./var/logs/symfony:/var/www/project/var/logs:cached
       - ./var/data/php/workspace:/var/www/workspace:cached
-      - ${COMPOSER_PATH}/cache:/var/www/.composer/cache:cached
-      #- ${SSH_KEY_PATH}/id_rsa:/var/www/.ssh/id_rsa
-      #- ${SSH_KEY_PATH}/id_rsa.pub:/var/www/.ssh/id_rsa.pub
-      #- ${SSH_KEY_PATH}/known_hosts:/var/www/.ssh/known_hosts
+      - ${COMPOSER_CACHE_PATH}:/var/www/.composer/cache:cached
+      - ${SSH_KEY_PATH}/${SSH_KEY_PATH_NAME}:/var/www/.ssh/id_rsa
+      - ${SSH_KEY_PATH}/${SSH_KEY_PATH_NAME}.pub:/var/www/.ssh/id_rsa.pub
+      - ${SSH_KEY_PATH}/known_hosts:/var/www/.ssh/known_hosts
     environment:
       HISTFILE: /var/www/workspace/.bash_history
       PROMPT_COMMAND: history -a
