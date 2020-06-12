@@ -8,7 +8,6 @@ services:
     volumes:
       - ${PROJECT_PATH}:/var/www/project:cached
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:cached
-      - ./docker/nginx/sites/:/etc/nginx/sites-available:cached
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d:cached
       - ./var/logs/nginx/:/var/log/nginx
 
