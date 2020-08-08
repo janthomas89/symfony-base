@@ -6,5 +6,6 @@ project/.env.local
 
 var/data/*
 !var/data/.gitkeep
+!var/data/php/workspace/.gitkeep
 var/logs/*
 !var/logs/.gitkeep
